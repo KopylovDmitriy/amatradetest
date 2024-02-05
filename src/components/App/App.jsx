@@ -12,7 +12,7 @@ function App() {
 
   const pagesList = [
     {
-      path: "/",
+      path: "/main",
       element: <Main/>
     },
     {

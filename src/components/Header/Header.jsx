@@ -35,7 +35,7 @@ const Header = () => {
             <div className="container">
                 <div className="header__boby">
                   
-                        <NavLink  className="header__logo" to="/">
+                        <NavLink  className="header__logo" to="/main">
                             <img style={{width: '120px'}} src="../img/logo.svg" alt="amatrade logo" />
                         </NavLink>
                         
