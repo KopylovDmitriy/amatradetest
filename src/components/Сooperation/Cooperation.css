@@ -1,0 +1,92 @@
+.cooperation {
+    position: relative;
+    background-image: url('/public/img/youtube_glavnyj.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.cooperation::before {
+    display: block;
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .70;
+    background: linear-gradient(to right, black 0%, black 70%, transparent 100%);
+}
+
+
+.cooperation__content {
+    padding: 25px 0;
+}
+
+.cooperation__list {
+    position: relative;
+    z-index: 2;
+}
+
+.cooperation__list::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #ffda30;
+}
+
+.cooperation__item {
+    position: relative;
+    padding-left: 75px;
+    counter-increment: li;
+    padding-bottom: 40px;
+}
+
+.cooperation__item:last-child {
+    padding-bottom: 0;
+}
+
+.cooperation__item::before {
+    content: counter(li);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    background: #f2f2f2;
+    font-weight: 500;
+}
+
+.cooperation__title {
+    text-transform: uppercase;
+    color: #F4CE19;
+    font-weight: 700;
+}
+
+.cooperation__desc {
+    color: white;
+    padding-top: 10px;
+    font-weight: 300;
+}
+
+.cooperation__action {
+    position: relative;
+    z-index: 4;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.cooperation__button {
+    margin-top: 20px;
+}

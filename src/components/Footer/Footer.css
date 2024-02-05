@@ -1,0 +1,14 @@
+.footer {
+    border-top: 1px solid #585858;
+    padding: 20px 0;
+    width: 100%;
+    background: black;
+    color: white;
+    z-index: 3;
+}
+
+.navigation__list_column {
+    display: flex;
+    flex-direction: column;
+}
+
