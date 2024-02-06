@@ -29,6 +29,8 @@
 }
 
 .services__info {
+    display: flex;
+    flex-direction: column;
     padding: 0 15px;
 }
 
@@ -55,6 +57,20 @@
     }
     .services__item {
         flex-direction: column;
+        justify-content: center;
+    }
+    .services__icon {
+        display: flex;
+        justify-content: center;
+    }
+    .services__info {
+        justify-content: center;
+    }
+    .service__title {
+        text-align: center;
+    }
+    .service__desc {
+        text-align: center;
     }
 }
   

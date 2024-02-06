@@ -136,6 +136,17 @@ p {
   line-height: 1.45;
 }
 
+@media (max-width: 810px) { 
+  h1 {
+    font-size: 54px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
 
 
 

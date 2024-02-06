@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom"
-// import { useEffect } from "react";
+import { useState } from "react"
 
 import "./Header.css"
 
 const Header = () => {
+
 	const linkList = [
 		{
 			link: "listings",
@@ -18,6 +19,12 @@ const Header = () => {
 			content: "Instagram Posts",
 		},
 	]
+
+	const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
+    const [menu_class, setMenuClass] = useState("navigation__list");
+    const [isMenuClicked, setIsMenuClicked] = useState(false);
+	const body = document.querySelector('body');
+	
 
 	const links = linkList.map((link, i) => {
 		return (
@@ -36,6 +43,30 @@ const Header = () => {
 		)
 	})
 
+
+	const updateMenu = () => {
+        if(!isMenuClicked) {
+            setBurgerClass("burger-bar clicked")
+            setMenuClass("navigation__list visible")
+			body.style.overflow = 'hidden'
+        }
+        else {
+            setBurgerClass("burger-bar unclicked")
+            setMenuClass("navigation__list hidden")
+			body.style.overflow = ''
+        }
+        setIsMenuClicked(!isMenuClicked)
+    }
+
+	const clickMenu = () => {
+		if (window.innerWidth < 910) {
+			setMenuClass("navigation__list hidden")
+			setBurgerClass("burger-bar unclicked")
+			body.style.overflow = ''
+		}
+	}
+
+
 	return (
 		<div className='header'>
 			<div className='container'>
@@ -49,10 +80,12 @@ const Header = () => {
 					</NavLink>
 
 					<nav className='navigation'>
-						<ul className='navigation__list'>{links}</ul>
-						{/* <div className="menu__burger">
-                                <span ></span>
-                        </div> */}
+						<ul className={menu_class} onClick={clickMenu}>{links}</ul>
+						<div className="burger-menu" onClick={updateMenu}>
+							<div className={burger_class} ></div>
+							<div className={burger_class} ></div>
+							<div className={burger_class} ></div>
+                		</div>
 					</nav>
 				</div>
 			</div>
