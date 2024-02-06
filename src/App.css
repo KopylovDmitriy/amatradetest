@@ -1,6 +1,5 @@
 .container {
   max-width: 1360px;
-  /* height: 100%; */
   margin: 0 auto;
   align-items: center;
   padding: 0 40px;
@@ -61,7 +60,22 @@
 }
 
 .chapter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 40px;
   padding: 40px 0;
+}
+
+
+
+/* ----- MEDIA ----- */
+
+
+@media (max-width: 810px) { 
+  .container {
+    padding: 0 20px;
+  }
 }
 

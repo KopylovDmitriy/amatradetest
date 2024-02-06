@@ -7,12 +7,13 @@ import Cooperation from "../../components/Сooperation/Cooperation"
 const Main = () => {
 	return (
 		<>
-			<Performance />
-
-			<Services />
+		
+			 <Performance />
+			 <Services />
 			<OurWorks />
-			<Cooperation />
-			<Footer />
+			<Cooperation /> 
+			{/* 
+			<Footer /> */}
 		</>
 	)
 }

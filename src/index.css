@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+#root {
+  /* display: flex;
+  justify-content: center; */
+}
+
 /* Box sizing rules */
 *,
 *::before,

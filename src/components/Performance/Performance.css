@@ -54,3 +54,15 @@
 .performance__button {
     margin-top: 20px;
 }
+
+
+
+/* ----- MEDIA ----- */
+
+
+@media (max-width: 810px) { 
+    .performance__info {
+        width: 100%;
+      text-align: center;
+    }
+}

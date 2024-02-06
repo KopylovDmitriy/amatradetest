@@ -56,3 +56,14 @@
     color: white;
     font-weight: 500;
 }
+
+
+
+/* ----- MEDIA ----- */
+
+
+@media (max-width: 810px) { 
+    .images__item {
+        max-width: 100%;
+    }
+}
