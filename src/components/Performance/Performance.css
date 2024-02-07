@@ -1,9 +1,3 @@
-.main {
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
 .performance {
     display: flex;
     align-items: center;
@@ -34,9 +28,11 @@
 }
 
 .performance__info {
-    /* display: flex;
-    flex-direction: column; */
     width: 55%;
+}
+
+.performance__title {
+    color: white;
 }
 
 .performance__subtitle {

@@ -18,13 +18,17 @@ const Header = () => {
 			link: "insta_posts",
 			content: "Instagram Posts",
 		},
+		{
+			link: "contacts",
+			content: "Contacts",
+		},
 	]
 
 	const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
     const [menu_class, setMenuClass] = useState("navigation__list");
     const [isMenuClicked, setIsMenuClicked] = useState(false);
 	const body = document.querySelector('body');
-	
+
 
 	const links = linkList.map((link, i) => {
 		return (
@@ -63,7 +67,9 @@ const Header = () => {
 			setMenuClass("navigation__list hidden")
 			setBurgerClass("burger-bar unclicked")
 			body.style.overflow = ''
+			setIsMenuClicked(!isMenuClicked)
 		}
+	
 	}
 
 
@@ -82,9 +88,9 @@ const Header = () => {
 					<nav className='navigation'>
 						<ul className={menu_class} onClick={clickMenu}>{links}</ul>
 						<div className="burger-menu" onClick={updateMenu}>
-							<div className={burger_class} ></div>
-							<div className={burger_class} ></div>
-							<div className={burger_class} ></div>
+							<div className={burger_class}></div>
+							<div className={burger_class}></div>
+							<div className={burger_class}></div>
                 		</div>
 					</nav>
 				</div>

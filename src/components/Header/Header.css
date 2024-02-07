@@ -121,7 +121,7 @@
         flex-direction: column;
     }
     .header {
-        position: relative;
+        position: fixed;
     }
     .navigation__link {
         text-align: center;

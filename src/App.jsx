@@ -7,6 +7,7 @@ import A_Content from "./pages/A+ content/A+Content"
 import InstaPosts from "./pages/InstaPosts/InstaPosts"
 import Listings from "./pages/Listings/Listings"
 import Main from "./pages/Main/Main"
+import Contacts from "./pages/Contacts/Contacts"
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 					<Route path={"/listings"} element={<Listings />} />
 					<Route path={"/a+_content"} element={<A_Content />} />
 					<Route path={"/insta_posts"} element={<InstaPosts />} />
+					<Route path={"/contacts"} element={<Contacts />} />
 				</Route>
 			</Routes>
 		</HashRouter>

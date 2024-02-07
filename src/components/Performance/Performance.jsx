@@ -2,7 +2,7 @@ import './Performance.css';
 
 const Performance = () => {
     return(
-        <div className="main">
+        
             <div className="performance">
                 <div className="performance__content">
                     <div className="container">
@@ -21,7 +21,7 @@ const Performance = () => {
                 </div>  
             </div>
             
-        </div>
+       
     )
 }
 
