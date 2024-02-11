@@ -132,9 +132,13 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.45;
 }
+
+
+
+
 
 @media (max-width: 810px) { 
   h1 {

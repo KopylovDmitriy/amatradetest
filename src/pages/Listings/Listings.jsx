@@ -1,4 +1,4 @@
-const Listings = () => {
+ const Listings = () => {
     return(
         <div className="page page__contacts ">
             <div className="page__photo"></div>

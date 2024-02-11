@@ -77,7 +77,7 @@ const Header = () => {
 		<div className='header'>
 			<div className='container'>
 				<div className='header__boby'>
-					<NavLink className='header__logo' to='/'>
+					<NavLink className='header__logo' onClick={clickMenu} to='/'>
 						<img
 							style={{ width: "120px" }}
 							src='./img/logo.svg'

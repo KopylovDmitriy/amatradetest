@@ -5,7 +5,7 @@
 .page__photo {
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 500px;
     background-image: url('/public/img/youtube_glavnyj.jpg');
     background-position: center center;
     background-repeat: no-repeat;
@@ -29,21 +29,23 @@
     display: flex;
     width: 100%;
     margin-top: 40px;
-    padding: 40px 0;
+    padding: 40px 80px;
+    gap: 50px;
 }
 
 .page__application {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
 }
 
 .contacts_application {
     display: flex;
-    width: 50%;
+    width: 40%;
 }
 
 .page__title {
+    font-size: 48px;
     text-transform: none;
     font-weight: 300;
 }
@@ -51,4 +53,63 @@
 .page__subtitle {
     color: #666;
     font-weight: 300;
+}
+
+.page__contactss {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.form {
+    margin-top: 10px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.form__label {
+    font-size: 14px;
+    color: #212529;
+}
+
+.input {
+    padding: 6px 12px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input:focus {
+    outline: 2px solid #c2dcfd;
+    border: 1px solid #87b9fb;
+}
+
+.input[type=text] {
+    color: black;
+}
+
+.button__input {
+    background-color: #F4CE19;
+    color: black;
+}
+
+.textarea {
+    padding: 6px 12px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.textarea:focus {
+    outline: 2px solid #c2dcfd;
+    border: 1px solid #87b9fb;
 }
