@@ -8,15 +8,23 @@ const Header = () => {
 	const linkList = [
 		{
 			link: "listings",
-			content: "Amazon Product Listings & SEO",
+			content: "Product Listings",
 		},
 		{
-			link: "a+_content",
-			content: "A+ – Content Packaging",
+			link: "aplus",
+			content: "A+ Content",
 		},
 		{
-			link: "insta_posts",
-			content: "Instagram Posts",
+			link: "packaging",
+			content: "Packaging",
+		},
+		{
+			link: "stores",
+			content: "Stores",
+		},
+		{
+			link: "socialmedia",
+			content: "Social Media",
 		},
 		{
 			link: "contacts",
@@ -63,7 +71,7 @@ const Header = () => {
     }
 
 	const clickMenu = () => {
-		if (window.innerWidth < 910) {
+		if (window.innerWidth < 1000) {
 			setMenuClass("navigation__list hidden")
 			setBurgerClass("burger-bar unclicked")
 			body.style.overflow = ''
@@ -80,18 +88,17 @@ const Header = () => {
 					<NavLink className='header__logo' onClick={clickMenu} to='/'>
 						<img
 							style={{ width: "120px" }}
-							src='./img/logo.svg'
+							src='./img/logo_black.svg'
 							alt='amatrade logo'
 						/>
 					</NavLink>
-
 					<nav className='navigation'>
 						<ul className={menu_class} onClick={clickMenu}>{links}</ul>
 						<div className="burger-menu" onClick={updateMenu}>
 							<div className={burger_class}></div>
 							<div className={burger_class}></div>
 							<div className={burger_class}></div>
-                		</div>
+						</div>
 					</nav>
 				</div>
 			</div>

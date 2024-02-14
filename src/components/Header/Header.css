@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
-    background: black;
+    background: rgb(0,0,0, .45);
     color: white;
     z-index: 30;
 }
@@ -101,12 +101,13 @@
 /* ----- MEDIA ----- */
 
 
-@media (max-width: 910px) { 
+@media (max-width: 1000px) { 
     .burger-menu {
         display: flex;
     }
     .navigation__list {
         display: none;
+        overflow-y: scroll;
     }
     .visible {
         display: flex;

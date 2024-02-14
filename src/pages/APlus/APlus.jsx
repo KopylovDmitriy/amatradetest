@@ -1,4 +1,4 @@
-const A_Content = () => {
+const APlus = () => {
     return(
         <div className="page page__contacts ">
         <div className="page__photo"></div>
@@ -9,4 +9,4 @@ const A_Content = () => {
     )
 }
 
-export default A_Content;
+export default APlus;

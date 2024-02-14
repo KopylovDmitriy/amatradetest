@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import './Cooperation.css';
 
 const Cooperation = () => {
@@ -33,7 +35,7 @@ const Cooperation = () => {
     return (
         <div className="chapter cooperation">
             <div className="title__content">
-                    <h2 className="title title_white">?Cooperation?</h2>
+                    <h2 className="title title_white">Steps of Cooperation</h2>
             </div>
             <div className="container">
                 <div className="cooperation__content">
@@ -43,8 +45,10 @@ const Cooperation = () => {
                 </div>
                 <div className="cooperation__action">
                     <h2 className="cooperation__title">Quality graphic designs that are guaranteed to impress your visitors – delivered in no time</h2>
-                    <h3 className="cooperation__desc">Ask for our competitive rates to get started</h3>
-                    <button className="button cooperation__button">Contact us</button>
+                    <p className="cooperation__desc">Ask for our competitive rates to get started</p>
+                    <NavLink to="/contacts">
+                        <button className="button cooperation__button">Contact us</button>
+                    </NavLink>
                 </div>
             </div>
         </div>

@@ -6,11 +6,13 @@ const Contacts = () => {
         <div className="page page__contacts ">
             <div className="page__photo"></div>
             <div className="container">
-                <div className="page__content">
+            
+                
+                <div className="page__wrapper">
+                    <h1 className="page__title">Contact us</h1>
+                    <p className="page__subtitle">Our team is on hand to answer your questions within 24 hours.</p>
+                    <div className="page__content">
                     <div className="page__application">
-                    
-                        <h1 className="page__title">Contact us</h1>
-                        <p className="page__subtitle">Our team is on hand to answer your questions within 24 hours.</p>
 
                         <form className="form">
                             <div className="form__group">
@@ -30,14 +32,22 @@ const Contacts = () => {
                         </form>
 
                     </div>
+
                     <div className="page__contactss">
-                        
-                        <p>Contacts</p>
-                        <p>Contacts dfg df gd</p>
-                        <p>Contactsd fgdf </p>
-                        <p>Contacts</p>
+                        <div className='header__logo'>
+                            <img
+                                style={{ width: "120px" }}
+                                src='./img/logo_white.svg'
+                                alt='amatrade logo'
+                            />
+                        </div>
+                        <p className="contacts__title">START A CONVERSATION</p>
+                        <p className="contacts__desc">plisko.e@gystecom.ae</p>
+                        <p className="contacts__desc">+48667952174</p>
                     </div>
                 </div>
+                </div>
+                
                 
             </div>
         </div>

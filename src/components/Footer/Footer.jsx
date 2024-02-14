@@ -3,18 +3,31 @@ import { NavLink } from "react-router-dom"
 import "./Footer.css"
 
 const Footer = () => {
+
 	const linkList = [
 		{
 			link: "listings",
-			content: "Amazon Product Listings & SEO",
+			content: "Product Listings",
 		},
 		{
-			link: "a+_content",
-			content: "A+ – Content Packaging",
+			link: "aplus",
+			content: "A+ Content",
 		},
 		{
-			link: "insta_posts",
-			content: "Instagram Posts",
+			link: "packaging",
+			content: "Packaging",
+		},
+		{
+			link: "stores",
+			content: "Stores",
+		},
+		{
+			link: "socialmedia",
+			content: "Social Media",
+		},
+		{
+			link: "contacts",
+			content: "Contacts",
 		},
 	]
 
@@ -46,7 +59,7 @@ const Footer = () => {
 							alt='amatrade logo'
 						/>
 					</NavLink>
-
+					<h2>В работе...</h2>
 					<nav className='navigation'>
 						<ul className='navigation__list navigation__list_column'>
 							{links}

@@ -1,71 +1,55 @@
-import "./OurWorks.css"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, FreeMode } from 'swiper/modules';
+
+
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+
+import "./OurWorks.css";
 
 const OurWorks = () => {
 	
 	const imagesList = [
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/Cristyler.png",
 			name: "Incasol",
-			color: "images_incasol",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/Ecolait.png",
 			name: "Incasol",
-			color: "images_lutevid",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/Incas_Protect.png",
 			name: "Incasol",
-			color: "images_incasol",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/Poweronyx.png",
 			name: "Incasol",
-			color: "images_incasol",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/Pursanga.png",
 			name: "Incasol",
-			color: "images_incasol",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/RetinOn.png",
 			name: "Incasol",
-			color: "images_incasol",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/Sustarox.png",
 			name: "Incasol",
-			color: "images_incasol",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 		{
-			img: "./img/3_4.png",
+			img: "./img/carousel/main/Yaconia.png",
 			name: "Incasol",
-			color: "images_incasol",
-			link: "https://www.amazon.com.mx/Incasol-Vitality-Suplemento-Presi%C3%B3n-Arterial/dp/B0C5N6BXX8/ref=sr_1_1?keywords=incasol&qid=1707055478&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47",
 		},
 	]
 
 	const images = imagesList.map((image, i) => {
 		return (
-			<a
-				key={i}
-				href={image.link}
-				id={image.name + i}
-				className={"images__item " + image.color}
-			>
-				<img className='images__img' src={image.img} alt={image.name} />
-				<div className='images__caption'>
-					<h3 className='images__desc'>{image.name}</h3>
-				</div>
-			</a>
+			<SwiperSlide key={image + i}>
+				<img src={image.img} alt={image.name} />
+			</SwiperSlide>
 		)
 	})
 
@@ -74,11 +58,38 @@ const OurWorks = () => {
 			<div className='title__content'>
 				<h2 className='title'>HOW WE DO</h2>
 			</div>
-			<div className='container'>
-				<div className='images'>{images}</div>
-			</div>
+			
+			<Swiper
+		
+				freeMode={true}
+				// pagination={{
+				// clickable: true,
+				// }}
+				modules={[FreeMode, Autoplay]}
+				className="mySwiper"
+				breakpoints={{
+					810: {
+						slidesPerView: 1,
+						spaceBetween: 0
+					},
+					1080: {
+						slidesPerView: 5,
+						spaceBetween: 20
+					}
+				}}
+				autoplay={{
+					delay: 2500,
+					disableOnInteraction: false,
+				}}
+				loop={true}
+				// mousewheel={{ forceToAxis: true, sensitivity: 0.5, releaseOnEdges: true }}
+				// centeredSlides={true}
+					
+			>
+				{images}
+			</Swiper>
 		</div>
 	)
 }
 
-export default OurWorks
+export default OurWorks;

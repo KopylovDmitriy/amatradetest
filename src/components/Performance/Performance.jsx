@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import './Performance.css';
 
 const Performance = () => {
@@ -15,7 +17,9 @@ const Performance = () => {
                             </p>
                             <p className="performance__desc">Boost your brand presence and increase sales with our tailored solutions!
                             </p>
-                            <button className="button performance__button">Contact us</button>
+                            <NavLink to="/contacts">
+                                <button className="button cooperation__button">Contact us</button>
+                            </NavLink>
                         </div> 
                     </div>
                 </div>  

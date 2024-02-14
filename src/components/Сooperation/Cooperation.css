@@ -1,6 +1,6 @@
 .cooperation {
     position: relative;
-    background-image: url('/public/img/youtube_glavnyj.jpg');
+    background-image: url('/public/img/bg.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,7 +45,13 @@
     padding-left: 75px;
     counter-increment: li;
     padding-bottom: 40px;
+    /* opacity: .6; */
+    transition: .2s linear;
 }
+
+/* .cooperation__item:hover {
+    opacity: 1;
+} */
 
 .cooperation__item:last-child {
     padding-bottom: 0;
