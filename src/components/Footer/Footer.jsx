@@ -51,17 +51,16 @@ const Footer = () => {
 	return (
 		<div className='footer'>
 			<div className='container'>
-				<div className='header__boby'>
+				<div className='header__boby header__boby_footer'>
 					<NavLink className='header__logo' to='/'>
 						<img
 							style={{ width: "120px" }}
-							src='./img/logo.svg'
+							src='./img/logo_black.svg'
 							alt='amatrade logo'
 						/>
 					</NavLink>
-					<h2>В работе...</h2>
 					<nav className='navigation'>
-						<ul className='navigation__list navigation__list_column'>
+						<ul className='navigation__list'>
 							{links}
 						</ul>
 					</nav>

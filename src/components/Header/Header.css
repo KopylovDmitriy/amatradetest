@@ -40,6 +40,10 @@
     font-size: 14px;
 }
 
+.navigation__link_active {
+    color: #F4CE19;
+}
+
 .navigation__link:hover {
     color: #F4CE19;
 }

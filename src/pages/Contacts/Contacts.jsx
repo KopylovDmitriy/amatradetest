@@ -1,6 +1,28 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 import './Contacts.css';
 
 const Contacts = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .sendForm('service_desqf7n', 'template_mhafkv4', form.current, {
+            publicKey: 'wJgFkgQ3-sfMsvvZW ',
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
+      };
 
     return(
         <div className="page page__contacts ">
@@ -14,20 +36,21 @@ const Contacts = () => {
                     <div className="page__content">
                     <div className="page__application">
 
-                        <form className="form">
+                        <form className="form" ref={form} onSubmit={sendEmail}>
                             <div className="form__group">
-                                <label htmlFor="" className="form__label" >Name*</label>
-                                <input type="text" placeholder="Your name" className="input"/>
+                                <label className="form__label" >Name*</label>
+                                <input type="text" placeholder="Your name" className="input" name="to_name"/>
                             </div>
                             <div className="form__group">
-                                <label htmlFor="" className="form__label" >Email*</label>
-                                <input type="text" placeholder="Your email" className="input"/>
+                                <label className="form__label" >Email*</label>
+                                <input type="email" placeholder="Your email" className="input" name="to_email"/>
                             </div>
                             <div className="form__group">
-                                <label htmlFor="" className="form__label">Message</label>
-                                <textarea name="" id="" cols="30" rows="4" placeholder="Your message" className="textarea"></textarea>
+                                <label className="form__label">Message</label>
+                                <textarea cols="30" rows="4" placeholder="Your message" className="textarea" name="to_message"></textarea>
                             </div>
-                            <button className="button button__input">Send message</button>
+                            <button type="submit" className="button button__input">Send message</button>
+                            <input type="submit" value="Send" />
 
                         </form>
 
