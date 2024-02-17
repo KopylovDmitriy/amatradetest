@@ -1,0 +1,42 @@
+.gallery {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+   
+}
+
+.gallery__item {
+    position: relative;
+    width: 33.3333%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery__img {
+    transition: .2s linear;
+    transform: scale(1.01);
+}
+
+.gallery__img:hover {
+    transform: scale(1.03);
+}
+
+
+@media (max-width: 1000px) { 
+    .gallery__item {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 810px) { 
+    .gallery__item {
+        width: 100%;
+    }
+}
+

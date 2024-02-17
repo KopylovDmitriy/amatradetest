@@ -1,24 +1,56 @@
- const Listings = () => {
+import Performance from "../../components/Performance/Performance";
+import Galery from "../../components/Gallery/Gallery";
+import ContactUs from "../../components/ContactUs/ContactUs";
+
+const Listings = () => {
+
+    const performance = {
+        title: "Listing Optimisation",
+		subtitle: "Give your listings a makeover with our image creation magic!",
+		desc: 
+			<>
+				<p className="performance__desc">Enter a world where your listings not only get noticed, but really attract buyers. Our expertise in compelling product photography ensures your listings shine and stand out. Let&apos;s make your listings stand out from the crowd!</p>
+			</>
+		,
+		className: "performance_short"
+    }
+
+    const gallery = [
+        {
+			img: "./img/carousel/main/RetinOn.png",
+			name: "RetinOn",
+		},
+		{
+			img: "./img/carousel/main/Lutevid.png",
+			name: "Lutevid",
+		},
+		{
+			img: "./img/carousel/main/Ecolait.png",
+			name: "Ecolait",
+		},
+		{
+			img: "./img/carousel/main/Poweronyx.png",
+			name: "Poweronyx",
+		},
+		
+		{
+			img: "./img/carousel/main/Pursanga.png",
+			name: "Pursanga",
+		},
+		{
+			img: "./img/carousel/main/Sustarox.png",
+			name: "Sustarox",
+		},
+    ]
+
+    
+
+
     return(
-        <div className="page">
-
-            <div className="performance_short">
-                <div className="performance__content">
-                    <div className="container">
-                        <div className="performance__info">
-                            <h1 className="performance__title">PRODUCT LISTINGS</h1>
-                            <h2 className="performance__subtitle">Give your listings a makeover with our image creation magic!</h2>
-                            <p className="performance__desc">Enter a world where your listings don't just get noticed, they captivate and enchant potential buyers! With our expertise in creating stunning product photography that engages your audience, we're here to showcase the best of what you have to offer. 
-                                Let's make your listings sparkle and stand out from the crowd!</p>
-                        </div> 
-                    </div>
-                </div>
-
-            </div>
-                <div className="container">
-                <h1 style={{"padding": "40px 0", "textAlign": "center"}}>Listings 09.02</h1>
-            </div>  
-            
+        <div className="">
+            <Performance content={performance} />
+            <Galery gallery={gallery} />
+            <ContactUs />
         </div>
     )
 }

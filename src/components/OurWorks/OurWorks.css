@@ -13,18 +13,7 @@
 
 
 
-.images__item:hover::after {
-    opacity: .7;
-}
 
-.images__item:hover .images__caption {
-    top: 50%;
-    opacity: 1;
-}
-
-.images__item:hover .images__img {
-    transform: scale(1.02);
-}
 
 .images__caption {
     position: absolute;

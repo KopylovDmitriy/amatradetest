@@ -26,7 +26,7 @@
 }
 
 .page__wrapper {
-    margin-top: 40px;
+    margin: 40px 0;
     padding: 40px 80px;
 }
 
@@ -128,4 +128,26 @@
 .textarea:focus {
     outline: 2px solid #c2dcfd;
     border: 1px solid #87b9fb;
+}
+
+
+
+/* ----- MEDIA ----- */
+
+
+@media (max-width: 810px) { 
+    .page__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%;
+        gap: 20px;
+    }
+    .page__wrapper {
+        
+        padding: 0;
+    }
+    .page__application {
+        width: 100%;
+    }
 }

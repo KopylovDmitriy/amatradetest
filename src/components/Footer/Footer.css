@@ -5,6 +5,7 @@
     background: black;
     color: white;
     z-index: 3;
+    margin-top: auto;
 }
 
 .navigation__list_column {

@@ -48,7 +48,6 @@ const Contacts = () => {
                                 <textarea cols="30" rows="4" placeholder="Your message" className="textarea" name="to_message"></textarea>
                             </div>
                             <button type="submit" className="button button__input">Send message</button>
-                            <input type="submit" value="Send" />
 
                         </form>
 

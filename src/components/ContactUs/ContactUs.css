@@ -1,0 +1,19 @@
+.action {
+    text-align: center;
+    /* margin: 40px 0; */
+    padding: 40px 0;
+    background-color: black;
+}
+
+.action__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white
+}
+
+.action__desc {
+  
+    padding-top: 10px;
+    font-weight: 300;
+    color: white
+}

@@ -12,36 +12,54 @@ const OurWorks = () => {
 	
 	const imagesList = [
 		{
-			img: "./img/carousel/main/Cristyler.png",
-			name: "Incasol",
+			img: "./img/carousel/main/RetinOn.png",
+			name: "RetinOn",
+		},
+		{
+			img: "./img/carousel/main/Lutevid.png",
+			name: "Lutevid",
 		},
 		{
 			img: "./img/carousel/main/Ecolait.png",
-			name: "Incasol",
-		},
-		{
-			img: "./img/carousel/main/Incas_Protect.png",
-			name: "Incasol",
+			name: "Ecolait",
 		},
 		{
 			img: "./img/carousel/main/Poweronyx.png",
-			name: "Incasol",
+			name: "Poweronyx",
 		},
+		
 		{
 			img: "./img/carousel/main/Pursanga.png",
-			name: "Incasol",
-		},
-		{
-			img: "./img/carousel/main/RetinOn.png",
-			name: "Incasol",
+			name: "Pursanga",
 		},
 		{
 			img: "./img/carousel/main/Sustarox.png",
-			name: "Incasol",
+			name: "Sustarox",
+		},
+		{
+			img: "./img/carousel/main/Incas_Protect.png",
+			name: "Incas_Protect",
 		},
 		{
 			img: "./img/carousel/main/Yaconia.png",
-			name: "Incasol",
+			name: "Yaconia",
+		},
+		{
+			img: "./img/carousel/main/Cristyler.png",
+			name: "Cristyler",
+		},
+		{
+			img: "./img/carousel/main/Elance.png",
+			name: "Elance",
+		},
+		
+		{
+			img: "./img/carousel/main/Flemona.png",
+			name: "Flemona",
+		},
+		{
+			img: "./img/carousel/main/Uventa.png",
+			name: "Uventa",
 		},
 	]
 
@@ -60,8 +78,7 @@ const OurWorks = () => {
 			</div>
 			
 			<Swiper
-		
-				freeMode={true}
+				// freeMode={true}
 				// pagination={{
 				// clickable: true,
 				// }}
@@ -73,18 +90,23 @@ const OurWorks = () => {
 						spaceBetween: 0
 					},
 					1080: {
-						slidesPerView: 5,
+						slidesPerView: 4.5,
 						spaceBetween: 20
 					}
 				}}
+				
 				autoplay={{
 					delay: 2500,
 					disableOnInteraction: false,
 				}}
 				loop={true}
-				// mousewheel={{ forceToAxis: true, sensitivity: 0.5, releaseOnEdges: true }}
 				// centeredSlides={true}
-					
+				grabCursor={true}
+				initialSlide={4}
+				
+				
+				
+				centeredSlides={true}
 			>
 				{images}
 			</Swiper>
