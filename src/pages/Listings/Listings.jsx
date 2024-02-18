@@ -1,5 +1,5 @@
 import Performance from "../../components/Performance/Performance";
-import Galery from "../../components/Gallery/Gallery";
+import Galery from "../../components/Gallery/Square/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 
 const Listings = () => {
@@ -16,38 +16,34 @@ const Listings = () => {
     }
 
     const gallery = [
-        {
-			img: "./img/carousel/main/RetinOn.png",
-			name: "RetinOn",
+		{
+			img: "./img/carousel/main/Pursanga.png",
+			name: "Pursanga",
 		},
 		{
-			img: "./img/carousel/main/Lutevid.png",
-			name: "Lutevid",
+			img: "./img/carousel/main/Poweronyx.png",
+			name: "Poweronyx",
 		},
 		{
 			img: "./img/carousel/main/Ecolait.png",
 			name: "Ecolait",
 		},
 		{
-			img: "./img/carousel/main/Poweronyx.png",
-			name: "Poweronyx",
-		},
-		
-		{
-			img: "./img/carousel/main/Pursanga.png",
-			name: "Pursanga",
-		},
-		{
 			img: "./img/carousel/main/Sustarox.png",
 			name: "Sustarox",
 		},
+		{
+			img: "./img/carousel/main/Yaconia.png",
+			name: "Yaconia",
+		},
+		{
+			img: "./img/carousel/main/Incas_Protect.png",
+			name: "Incas_Protect",
+		}
     ]
 
-    
-
-
     return(
-        <div className="">
+        <div className="page">
             <Performance content={performance} />
             <Galery gallery={gallery} />
             <ContactUs />

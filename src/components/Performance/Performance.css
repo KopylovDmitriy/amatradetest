@@ -99,3 +99,10 @@
         font-size: 18px;
     }
 }
+
+@media (max-width: 1000px) { 
+    .performance__info {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -33,13 +33,9 @@ const Footer = () => {
 
 	const links = linkList.map((link, i) => {
 		return (
-			<li key={i} className='navigation__item'>
+			<li key={i} className='footer__item'>
 				<NavLink
-					className={({ isActive }) =>
-						isActive
-							? "navigation__link navigation__link_active"
-							: "navigation__link"
-					}
+					className="footer__link"
 					to={link.link}
 				>
 					{link.content}
@@ -51,7 +47,7 @@ const Footer = () => {
 	return (
 		<div className='footer'>
 			<div className='container'>
-				<div className='header__boby header__boby_footer'>
+				<div className='footer__boby'>
 					<NavLink className='header__logo' to='/'>
 						<img
 							style={{ width: "120px" }}
@@ -59,11 +55,15 @@ const Footer = () => {
 							alt='amatrade logo'
 						/>
 					</NavLink>
-					<nav className='navigation'>
-						<ul className='navigation__list'>
+					<nav className='footer__nav'>
+						<ul className='footer__list'>
 							{links}
 						</ul>
 					</nav>
+					<div className="footer__contacts">
+						<div className="footer__info">plisko.e@gystecom.ae</div>
+						<div className="footer__info">+48667952174</div>
+					</div>
 				</div>
 			</div>
 		</div>

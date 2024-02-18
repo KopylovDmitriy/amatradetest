@@ -27,7 +27,6 @@ const OurWorks = () => {
 			img: "./img/carousel/main/Poweronyx.png",
 			name: "Poweronyx",
 		},
-		
 		{
 			img: "./img/carousel/main/Pursanga.png",
 			name: "Pursanga",
@@ -89,7 +88,11 @@ const OurWorks = () => {
 						slidesPerView: 1,
 						spaceBetween: 0
 					},
-					1080: {
+					1000: {
+						slidesPerView: 3.5,
+						spaceBetween: 10
+					},
+					1280: {
 						slidesPerView: 4.5,
 						spaceBetween: 20
 					}

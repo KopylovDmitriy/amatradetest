@@ -19,7 +19,7 @@ const Packaging = () => {
 
 
     return(
-        <div className="">
+        <div className="page">
             <Performance content={performance}/>
             <ContactUs />
         </div>

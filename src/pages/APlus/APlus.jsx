@@ -1,22 +1,40 @@
+import Performance from "../../components/Performance/Performance";
 import ContactUs from "../../components/ContactUs/ContactUs";
+import Gallery from "../../components/Gallery/Square/Gallery";
 
 const APlus = () => {
+
+    const performance = {
+        title: "А+ Content",
+		subtitle: "Are you a brand owner on Amazon?",
+		desc: 
+			<>
+				<p className="performance__desc">The value of A+ content cannot be overstated - enhance your product listings with our premium A+ content. We select the most eye-catching designs and compelling brand stories to captivate and engage your audience</p>
+			</>
+		,
+		className: "performance_short"
+    }
+
+    const gallery = [
+		{
+			img: "./img/carousel/a+/incasol_1.png",
+			name: "post_1",
+		},
+		{
+			img: "./img/carousel/a+/duston.png",
+			name: "post_2",
+		},
+		{
+			img: "./img/carousel/a+/incasol_2.png",
+			name: "post_3",
+		},
+    ]
+
     return(
         <div className="page">
-
-            <div className="performance_short">
-                <div className="performance__content">
-                    <div className="container">
-                        <div className="performance__info">
-                            <h1 className="performance__title">А+ content</h1>
-                            <h2 className="performance__subtitle">Are you a brand owner on Amazon?</h2>
-                            <p className="performance__desc">The value of A+ content cannot be overstated – enhance your product listings with our premium A+ content. We select the most eye-catching designs and compelling brand stories to captivate and engage your audience</p>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <ContactUs /> 
-            
+            <Performance content={performance}/>
+            <Gallery gallery={gallery} />
+			<ContactUs />
         </div>
     )
 }

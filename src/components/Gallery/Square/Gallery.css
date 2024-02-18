@@ -7,7 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     padding: 40px 0;
-   
 }
 
 .gallery__item {
@@ -31,12 +30,26 @@
     .gallery__item {
         width: 50%;
     }
+    .gallery {
+        margin: 20px 0;
+    }
+    
+    .gallery__wrapper {
+        padding: 20px 0;
+    }
 }
 
 
 @media (max-width: 810px) { 
     .gallery__item {
         width: 100%;
+    }
+    .gallery {
+        margin: 20px 0;
+    }
+    
+    .gallery__wrapper {
+        padding: 20px 0;
     }
 }
 

@@ -2,20 +2,60 @@
     border-top: 1px solid #585858;
     padding: 20px 0;
     width: 100%;
-    background: black;
+    background: #111;
     color: white;
     z-index: 3;
     margin-top: auto;
 }
 
-.navigation__list_column {
-    display: flex;
-    flex-direction: column;
-}
 
-.header__boby_footer {
+.footer__boby {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.footer__nav {
+    margin-top: 20px;
+    display: flex;
+}
+
+.footer__list {
+    display: flex;
+}
+
+.footer__item {
+    display: flex;
+}
+
+.footer__link {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    transition: .2s linear;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.footer__link:hover {
+    color: #F4CE19;
+}
+
+.footer__contacts {
+    display: flex;
+}
+
+.footer__info {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #f0f0f0;
+}
+
+
+@media (max-width: 810px) { 
+    .footer__list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

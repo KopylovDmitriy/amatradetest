@@ -1,4 +1,6 @@
 import Performance from "../../components/Performance/Performance";
+import Gallery from "../../components/Gallery/Square/Gallery";
+import ContactUs from "../../components/ContactUs/ContactUs";
 
 const Stores = () => {
 
@@ -13,12 +15,39 @@ const Stores = () => {
 		className: "performance_short"
     }
 
-    
+    const gallery = [
+		{
+			img: "./img/carousel/stores/lutevid.png",
+			name: "Pursanga",
+		},
+		{
+			img: "./img/carousel/stores/oxys_1.png",
+			name: "Poweronyx",
+		},
+		{
+			img: "./img/carousel/stores/incasol.png",
+			name: "Pursanga",
+		},
+		{
+			img: "./img/carousel/stores/oxys_2.png",
+			name: "Poweronyx",
+		},
+        {
+			img: "./img/carousel/stores/duston.png",
+			name: "Pursanga",
+		},
+		{
+			img: "./img/carousel/stores/flemona.png",
+			name: "Poweronyx",
+		},
+    ]
 
 
     return(
-        <div className="">
+        <div className="page">
             <Performance content={performance}/>
+            <Gallery gallery={gallery}/>
+            <ContactUs />
         </div>
     )
 }

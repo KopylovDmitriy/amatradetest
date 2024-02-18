@@ -1,5 +1,7 @@
-import Gallery from "../../components/Gallery/Gallery";
+import Gallery from "../../components/Gallery/Square/Gallery";
 import Performance from "../../components/Performance/Performance";
+import ContactUs from "../../components/ContactUs/ContactUs";
+
 
 const Social = () => {
 
@@ -15,37 +17,37 @@ const Social = () => {
     }
 
     const gallery = [
-        {
-			img: "./img/carousel/main/RetinOn.png",
-			name: "Incasol",
+		{
+			img: "./img/carousel/social/1.png",
+			name: "post_1",
 		},
 		{
-			img: "./img/carousel/main/Lutevid.png",
-			name: "Incasol",
+			img: "./img/carousel/social/2.png",
+			name: "post_2",
 		},
 		{
-			img: "./img/carousel/main/Ecolait.png",
-			name: "Incasol",
+			img: "./img/carousel/social/3.png",
+			name: "post_3",
 		},
 		{
-			img: "./img/carousel/main/Poweronyx.png",
-			name: "Incasol",
-		},
-		
-		{
-			img: "./img/carousel/main/Pursanga.png",
-			name: "Incasol",
+			img: "./img/carousel/social/4.png",
+			name: "post_4",
 		},
 		{
-			img: "./img/carousel/main/Sustarox.png",
-			name: "Incasol",
+			img: "./img/carousel/social/6.png",
+			name: "post_5",
 		},
+		{
+			img: "./img/carousel/social/5.png",
+			name: "post_6",
+		}
     ]
 
     return(
-        <div className="">
+        <div className="page">
             <Performance content={performance}/>
             <Gallery gallery={gallery} />
+			<ContactUs />
         </div>
     )
 }
