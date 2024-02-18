@@ -1,11 +1,17 @@
+import { NavLink } from "react-router-dom"
+import { useEffect } from "react"
+
 import OurWorks from "../../components/OurWorks/OurWorks"
 import Performance from "../../components/Performance/Performance"
 import Services from "../../components/Services/Servecis"
 import Cooperation from "../../components/Сooperation/Cooperation"
 
-import { NavLink } from "react-router-dom"
-
 const Main = () => {
+
+	useEffect(() => {
+		// 👇️ scroll to top on page load
+		window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+	  }, []);
 
 	const performance = {
         title: "AMATRADE",

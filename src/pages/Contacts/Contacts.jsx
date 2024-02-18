@@ -1,11 +1,19 @@
 import { useRef } from 'react';
+import { useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+
+
 
 import Performance from "../../components/Performance/Performance";
 
 import './Contacts.css';
 
 const Contacts = () => {
+
+    useEffect(() => {
+		// 👇️ scroll to top on page load
+		window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+	  }, []);
 
     const performance = {
         title: "Contact us",

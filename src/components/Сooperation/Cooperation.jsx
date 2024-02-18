@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 import './Cooperation.css';
 
@@ -23,20 +25,46 @@ const Cooperation = () => {
         },
     ]
 
+    const textAnimation = {
+        hidden: {
+            y: 10,
+            opacity: 0
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: custom * 0.1
+            }
+        })
+    }
+
     const cooperations = cooperationsList.map((coop, i) => {
         return(
-            <li key={i} className="cooperation__item">
+            <motion.li
+                variants={textAnimation}
+                custom={i + 1}
+                key={i}
+                className="cooperation__item">
                 <h3 className="cooperation__title">{coop.title}</h3>
                 <p className="cooperation__desc">{coop.desc}</p>
-            </li>
+            </motion.li>
         )
     })
 
     return (
-        <div className="chapter cooperation">
-            <div className="title__content">
-                    <h2 className="title title_white">Steps of Cooperation</h2>
-            </div>
+        <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{amount: .1
+            }}
+            className="chapter cooperation">
+            <motion.div
+                variants={textAnimation}
+                custom={0}
+                className="title__content">
+                <h2 className="title title_white">Steps of Cooperation</h2>
+            </motion.div>
             <div className="container">
                 <div className="cooperation__content">
                     <ul className="cooperation__list">
@@ -51,7 +79,7 @@ const Cooperation = () => {
                     </NavLink>
                 </div>
             </div>
-        </div>
+        </motion.section>
         
     )
 }

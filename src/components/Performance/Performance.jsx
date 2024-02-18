@@ -22,7 +22,8 @@ const Performance = ({content}) => {
     return(
             <motion.section
                 initial="hidden"
-                whileInView="visible">
+                whileInView="visible"
+                viewport={{amount: .2}}>
         
                 <div className={className}>
                 <div className="performance__content">

@@ -1,8 +1,15 @@
+import { useEffect } from "react";
+
 import Performance from "../../components/Performance/Performance";
 import ContactUs from "../../components/ContactUs/ContactUs";
 
 
 const Packaging = () => {
+
+    useEffect(() => {
+		// 👇️ scroll to top on page load
+		window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+	  }, []);
 
     const performance = {
         title: "Packaging designing",

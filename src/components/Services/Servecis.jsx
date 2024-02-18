@@ -50,10 +50,14 @@ const Services = () => {
 
     const services = servicesList.map((service, i) => {
         return(
-            <motion.div custom={i + 1} variants={textAnimation} key={i} className="services__item">
+            <motion.div
+                custom={i + 1}
+                variants={textAnimation}
+                key={i}
+                
+                className="services__item">
                 <div className="services__icon">
                     <img src={service.img} alt="as" />
-                    
                 </div>
                 <div className="services__info">
                     <h3 className="service__title">{service.title}</h3>
@@ -66,6 +70,7 @@ const Services = () => {
     return (
         <motion.section
             initial="hidden"
+            viewport={{amount: .2}}
             whileInView="visible"
             className="chapter services">
             <div className="container">
