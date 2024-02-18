@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+
+
 import './Services.css';
 
 
@@ -31,9 +34,23 @@ const Services = () => {
         },
     ]
 
+    const textAnimation = {
+        hidden: {
+            y: 40,
+            opacity: 0
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: custom * 0.1
+            }
+        })
+    }
+
     const services = servicesList.map((service, i) => {
         return(
-            <div key={i} className="services__item">
+            <motion.div custom={i + 1} variants={textAnimation} key={i} className="services__item">
                 <div className="services__icon">
                     <img src={service.img} alt="as" />
                     
@@ -42,21 +59,24 @@ const Services = () => {
                     <h3 className="service__title">{service.title}</h3>
                     <p className="service__desc">{service.desc}</p>
                 </div>
-            </div>
+            </motion.div>
         )
     })
 
     return (
-        <div className="chapter services">
+        <motion.section
+            initial="hidden"
+            whileInView="visible"
+            className="chapter services">
             <div className="container">
-                <div className="title__content">
+                <motion.div custom={0} variants={textAnimation} className="title__content">
                     <h2 className="title">What we do</h2>
-                </div>
+                </motion.div>
                 <div className="services__list">
                    {services}
                 </div>
             </div>     
-        </div>
+        </motion.section>
     )
 }
 

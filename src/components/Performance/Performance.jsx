@@ -1,21 +1,45 @@
+import { motion } from 'framer-motion';
+
 import './Performance.css';
 
 const Performance = ({content}) => {
     const {title, subtitle, desc, className} = content;
     
+    const textAnimation = {
+        hidden: {
+            y: 40,
+            opacity: 0
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: custom * 0.1
+            }
+        })
+    }
+
     return(
+            <motion.section
+                initial="hidden"
+                whileInView="visible">
         
-            <div className={className}>
+                <div className={className}>
                 <div className="performance__content">
                     <div className="container">
                         <div className="performance__info">
-                            <h1 className="performance__title">{title}</h1>
-                            <h2 className="performance__subtitle">{subtitle}</h2>
-                            {desc}
+                            <motion.h1 custom={1} variants={textAnimation} className="performance__title">{title}</motion.h1>
+                            <motion.h2 custom={2} variants={textAnimation} className="performance__subtitle">{subtitle}</motion.h2>
+                            <motion.div custom={3} variants={textAnimation}>
+                                {desc}
+                            </motion.div>
+                            
                         </div> 
                     </div>
                 </div>  
             </div>
+            </motion.section>
+            
             
        
     )

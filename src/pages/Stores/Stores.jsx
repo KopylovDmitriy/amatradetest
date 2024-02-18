@@ -18,30 +18,29 @@ const Stores = () => {
     const gallery = [
 		{
 			img: "./img/carousel/stores/lutevid.png",
-			name: "Pursanga",
+			name: "lutevid",
 		},
 		{
 			img: "./img/carousel/stores/oxys_1.png",
-			name: "Poweronyx",
+			name: "osyx_1",
 		},
 		{
 			img: "./img/carousel/stores/incasol.png",
-			name: "Pursanga",
+			name: "incasol",
 		},
 		{
 			img: "./img/carousel/stores/oxys_2.png",
-			name: "Poweronyx",
+			name: "oxys_2",
 		},
         {
 			img: "./img/carousel/stores/duston.png",
-			name: "Pursanga",
+			name: "duston",
 		},
 		{
 			img: "./img/carousel/stores/flemona.png",
-			name: "Poweronyx",
+			name: "flemona",
 		},
     ]
-
 
     return(
         <div className="page">
