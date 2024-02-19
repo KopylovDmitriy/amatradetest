@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import ContactUs from '../ContactUs/ContactUs';
 
 
 import './Cooperation.css';
@@ -59,25 +60,28 @@ const Cooperation = () => {
             viewport={{amount: .1
             }}
             className="chapter cooperation">
-            <motion.div
-                variants={textAnimation}
-                custom={0}
-                className="title__content">
-                <h2 className="title title_white">Steps of Cooperation</h2>
-            </motion.div>
+            <div className="title__content">
+                <motion.h2
+                    variants={textAnimation}
+                    custom={0}
+                    className="title title_white">Steps of Cooperation</motion.h2>
+            </div>
             <div className="container">
                 <div className="cooperation__content">
                     <ul className="cooperation__list">
                         {cooperations}
                     </ul>
                 </div>
-                <div className="cooperation__action">
+                <motion.div
+                    variants={textAnimation}
+                    custom={5}
+                    className="cooperation__action">
                     <h2 className="cooperation__title">Quality graphic designs that are guaranteed to impress your visitors – delivered in no time</h2>
                     <p className="cooperation__desc">Ask for our competitive rates to get started</p>
                     <NavLink to="/contacts">
                         <button className="button cooperation__button">Contact us</button>
                     </NavLink>
-                </div>
+                </motion.div>
             </div>
         </motion.section>
         

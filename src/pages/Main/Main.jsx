@@ -9,9 +9,8 @@ import Cooperation from "../../components/Сooperation/Cooperation"
 const Main = () => {
 
 	useEffect(() => {
-		// 👇️ scroll to top on page load
 		window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-	  }, []);
+	}, []);
 
 	const performance = {
         title: "AMATRADE",

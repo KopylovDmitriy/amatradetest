@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-
+import { motion } from 'framer-motion';
 
 
 import Performance from "../../components/Performance/Performance";
@@ -11,9 +11,22 @@ import './Contacts.css';
 const Contacts = () => {
 
     useEffect(() => {
-		// 👇️ scroll to top on page load
 		window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-	  }, []);
+	}, []);
+
+    const textAnimation = {
+        hidden: {
+            y: 40,
+            opacity: 0
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: custom * 0.1
+            }
+        })
+    }
 
     const performance = {
         title: "Contact us",
@@ -45,10 +58,12 @@ const Contacts = () => {
         <div className="page">
             <Performance content={performance} />
             <div className="container">
-                <div className="page__wrapper">
-                    {/* <h1 className="page__title">Contact us</h1>
-                    <p className="page__subtitle">Our team is on hand to answer your questions within 24 hours.</p> */}
-                    <div className="page__content">
+                <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{amount: .2}}
+                className="page__wrapper">
+                    <motion.div variants={textAnimation}className="page__content">
                         <div className="page__application">
 
                             <form className="form" ref={form} onSubmit={sendEmail}>
@@ -82,8 +97,8 @@ const Contacts = () => {
                             <p className="contacts__desc">plisko.e@gystecom.ae</p>
                             <p className="contacts__desc">+48667952174</p>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.section>
             </div>
         </div>
     )
