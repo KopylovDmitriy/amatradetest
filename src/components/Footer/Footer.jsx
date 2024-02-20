@@ -61,8 +61,15 @@ const Footer = () => {
 						</ul>
 					</nav>
 					<div className="footer__contacts">
-						<div className="footer__info">plisko.e@gystecom.ae</div>
-						<div className="footer__info">+48667952174</div>
+						<div className="footer__info">
+							<img src="./img/icons/mail.svg" alt="mail" className="footer__img"/>
+							<p className="footer__desc">plisko.e@gystecom.ae</p>
+						</div>
+						<div className="footer__info">
+							<img src="./img/icons/telegram.svg" alt="telegram" className="footer__img"/>
+							<img src="./img/icons/whats-app.svg" alt="whats app" className="footer__img"/>
+							<p className="footer__desc">+48667952174</p>
+						</div>
 					</div>
 				</div>
 			</div>

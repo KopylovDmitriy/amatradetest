@@ -43,13 +43,28 @@
 
 .footer__contacts {
     display: flex;
+    gap: 20px
 }
 
 .footer__info {
+    display: flex;
     padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__desc {
     font-size: 14px;
     font-weight: 300;
     color: #f0f0f0;
+}
+
+.footer__img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 

@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ContactUs from '../ContactUs/ContactUs';
 
 
 import './Cooperation.css';
