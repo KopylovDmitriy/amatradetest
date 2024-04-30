@@ -73,18 +73,18 @@ const Form = ({color}) => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        // emailjs
-        //   .sendForm('service_desqf7n', 'template_mhafkv4', form.current, {
-        //     publicKey: 'wJgFkgQ3-sfMsvvZW',
-        //   })
-        //   .then(
-        //     () => {
-        //       console.log('SUCCESS!');
-        //     },
-        //     (error) => {
-        //       console.log('FAILED...', error.text);
-        //     },
-        //   );
+        emailjs
+          .sendForm('service_desqf7n', 'template_mhafkv4', form.current, {
+            publicKey: 'wJgFkgQ3-sfMsvvZW',
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
 
         if (!formValid) {
             setShowError(true);
@@ -100,24 +100,6 @@ const Form = ({color}) => {
         }
 
     };
-
-    // const body = document.querySelector('body');
-    // function bodyLock () {
-    //     const lockPaddingValue = window.innerWidth - document.querySelector('#root').offsetWidth + 'px';
-        
-    //     const positive = () => {
-    //         body.style.paddingRight = lockPaddingValue;
-    //         body.style.overflow = 'hidden';
-    //     }
-
-    //     const negative = () => {
-    //         body.style.paddingRight = 0;
-    //         body.style.overflow = 'auto';
-    //     }
-
-    //     modalActive ? positive() : negative();
-    // }
-    // bodyLock ()
 
     return(
         <div className="form">     
