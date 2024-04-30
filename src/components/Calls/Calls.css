@@ -1,0 +1,110 @@
+.calls {
+    display: flex;
+    width: 100%;
+}
+
+.calls__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* width: 100%; */
+}
+
+.calls__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calls__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calls__svg {
+    width: 30px;
+    height: 30px;
+}
+
+.calls__svg_small {
+    width: 22px;
+    height: 22px;
+}
+
+
+.calls__svg_black-fill {
+    fill: #111;
+}
+.calls__svg_black-stroke {
+    stroke: #111;
+}
+
+
+
+.calls__svg_telegram-fill {
+    transition: 0.15s linear;
+    fill: #24A1DE;
+}
+.calls__item:hover .calls__svg_telegram-fill {
+    fill: rgb(89, 180, 226);
+}
+
+
+.calls__svg_whats-app-fill {
+    fill: #128c7e;
+    transition: 0.15s linear;
+}
+.calls__item:hover .calls__svg_whats-app-fill {
+    fill: #39b1a3;
+
+}
+
+.calls__svg_mail-stroke {
+    stroke: #c71610;
+    transition: 0.15s linear;
+}
+.calls__item:hover .calls__svg_mail-stroke {
+    stroke: #e4514c;
+}
+
+
+
+.calls__svg_mail-white-stroke {
+    stroke: white;
+    transition: 0.15s linear;
+}
+.calls__item:hover .calls__svg_mail-white-stroke {
+    stroke: #c71610;
+}
+
+
+.calls__svg_telegram-white-fill {
+    fill: white;
+    transition: 0.15s linear;
+}
+.calls__item:hover .calls__svg_telegram-white-fill {
+    fill: #24A1DE;
+}
+
+
+.calls__svg_whats-app-white-fill {
+    fill: white;
+    transition: 0.15s linear;
+}
+.calls__item:hover .calls__svg_whats-app-white-fill {
+    fill: #128c7e;
+}
+
+
+@media (max-width: 810px) { 
+    .calls__list {
+        gap: 16px;
+    }
+    .calls__svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+

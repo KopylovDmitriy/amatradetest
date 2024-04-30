@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 
+import { useEffect } from 'react';
 
+
+import AboutUs from '../AboutUs/AboutUs';
 import './Services.css';
 
 
@@ -53,11 +56,11 @@ const Services = () => {
             <motion.div
                 custom={i + 1}
                 variants={textAnimation}
-                key={i}
                 
+                key={i}
                 className="services__item">
                 <div className="services__icon">
-                    <img src={service.img} alt="as" />
+                    <img src={service.img} alt={service.title} />
                 </div>
                 <div className="services__info">
                     <h3 className="service__title">{service.title}</h3>
@@ -70,9 +73,10 @@ const Services = () => {
     return (
         <motion.section
             initial="hidden"
-            viewport={{amount: .2}}
+            viewport={{amount: .1, once: true}}
             whileInView="visible"
             className="chapter services">
+        
             <div className="container">
                 <motion.div custom={0} variants={textAnimation} className="title__content">
                     <h2 className="title">What we do</h2>
@@ -80,7 +84,8 @@ const Services = () => {
                 <div className="services__list">
                    {services}
                 </div>
-            </div>     
+            </div>
+            
         </motion.section>
     )
 }

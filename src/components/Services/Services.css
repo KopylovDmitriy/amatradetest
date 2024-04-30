@@ -7,6 +7,11 @@
     color: black;
 } */
 
+.services {
+    margin-top: 0;
+    padding: 0 0 40px 0;
+}
+
 .services__list {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +56,11 @@
 /* ----- MEDIA ----- */
 
 
-@media (max-width: 810px) { 
+@media (max-width: 810px) {
+    .services {
+        margin-top: 20px;
+        padding: 20px 0;
+    }
     .services__item {
       width: 100%;
     }

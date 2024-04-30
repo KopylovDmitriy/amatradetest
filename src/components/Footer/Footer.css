@@ -43,7 +43,8 @@
 
 .footer__contacts {
     display: flex;
-    gap: 20px
+    gap: 20px;
+    margin-top: 10px;
 }
 
 .footer__info {
@@ -52,6 +53,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .footer__desc {
@@ -60,11 +62,13 @@
     color: #f0f0f0;
 }
 
-.footer__img {
-    display: flex;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+
+
+@media (max-width: 1000px) { 
+    .footer__img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 
@@ -72,5 +76,8 @@
     .footer__list {
         flex-direction: column;
         align-items: center;
+    }
+    .footer__info {
+        gap: 14px;
     }
 }

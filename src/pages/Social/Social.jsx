@@ -24,27 +24,27 @@ const Social = () => {
 
     const gallery = [
 		{
-			img: "./img/carousel/social/1.png",
+			img: "./img/carousel/social/1.webp",
 			name: "post_1",
 		},
 		{
-			img: "./img/carousel/social/2.png",
+			img: "./img/carousel/social/2.webp",
 			name: "post_2",
 		},
 		{
-			img: "./img/carousel/social/3.png",
+			img: "./img/carousel/social/3.webp",
 			name: "post_3",
 		},
 		{
-			img: "./img/carousel/social/4.png",
+			img: "./img/carousel/social/4.webp",
 			name: "post_4",
 		},
 		{
-			img: "./img/carousel/social/6.png",
+			img: "./img/carousel/social/6.webp",
 			name: "post_5",
 		},
 		{
-			img: "./img/carousel/social/5.png",
+			img: "./img/carousel/social/5.webp",
 			name: "post_6",
 		}
     ]

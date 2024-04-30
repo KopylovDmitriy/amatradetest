@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+.contacts {
+    position: relative;
+}
+
 .page__photo {
     position: relative;
     width: 100%;
@@ -59,81 +63,32 @@
     font-weight: 300;
 }
 
-.page__contactss {
+.page__contacts {
     display: flex;
     flex-direction: column;
 }
 
 .contacts__title {
+    font-family: 'FuturaDemiC_1', sans-serif;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: #F4CE19;
 }
 
 .contacts__desc {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
 }
 
-
-
-
-.form {
-    
-}
-
-.form__group {
+.contacts__icons {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0;
+    width: 100%;
+    justify-content: start;
+    padding: 10px 0;
 }
-
-.form__label {
-    font-size: 14px;
-    color: #212529;
-}
-
-.input {
-    padding: 6px 12px;
-    border: 1px solid rgb(212, 212, 212);
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.input:focus {
-    outline: 2px solid #c2dcfd;
-    border: 1px solid #87b9fb;
-}
-
-.input[type=text] {
-    color: black;
-}
-
-.button__input {
-    background-color: #F4CE19;
-    color: black;
-}
-
-.textarea {
-    padding: 6px 12px;
-    border: 1px solid rgb(212, 212, 212);
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.textarea:focus {
-    outline: 2px solid #c2dcfd;
-    border: 1px solid #87b9fb;
-}
-
-
 
 /* ----- MEDIA ----- */
-
 
 @media (max-width: 810px) { 
     .page__content {
@@ -149,5 +104,15 @@
     }
     .page__application {
         width: 100%;
+    }
+    .page__contacts {
+        align-items: center;
+        justify-content: center;
+    }
+    .contacts__icons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
     }
 }

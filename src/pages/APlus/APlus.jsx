@@ -23,23 +23,23 @@ const APlus = () => {
 
     const gallery = [
 		{
-			img: "./img/carousel/a+/incasol_1.png",
-			name: "post_1",
+			img: "./img/carousel/a+/incasol_1.webp",
+			name: "incasol pro",
 		},
 		{
-			img: "./img/carousel/a+/duston.png",
-			name: "post_2",
+			img: "./img/carousel/a+/duston.webp",
+			name: "duston gel",
 		},
 		{
-			img: "./img/carousel/a+/incasol_2.png",
-			name: "post_3",
+			img: "./img/carousel/a+/incasol_2.webp",
+			name: "incasol",
 		},
     ]
 
     return(
         <div className="page">
             <Performance content={performance}/>
-            <Gallery gallery={gallery} />
+            	<Gallery gallery={gallery} />
 			<ContactUs />
         </div>
     )

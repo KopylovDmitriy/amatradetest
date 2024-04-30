@@ -5,6 +5,10 @@ import OurWorks from "../../components/OurWorks/OurWorks"
 import Performance from "../../components/Performance/Performance"
 import Services from "../../components/Services/Servecis"
 import Cooperation from "../../components/Сooperation/Cooperation"
+import Terms from "../../components/Terms/Terms"
+import Logos from "../../components/Logos/Logos"
+import ContactsUs from "../../components/ContactUs/ContactUs"
+import Calls from "../../components/Calls/Calls"
 
 const Main = () => {
 
@@ -13,18 +17,21 @@ const Main = () => {
 	}, []);
 
 	const performance = {
-        title: "AMATRADE",
-		subtitle: "MARKETPLACES CONSULTING",
+        title: "Increase your sales on marketplaces",
+		subtitle: "with Amatrade Consulting!",
 		desc: 
 			<>
-				<p className="performance__desc">Boost your success with our help!<br/>Amazon, Mercado Libre, Jumia, Allegro-we&apos;re ready!</p>
-				<p className="performance__desc">Listing, product development, A+ content, brand logos and brand stories – we provide world-class consultancy services to sellers on marketplaces around the world</p>
 				<p className="performance__desc">
-					Boost your brand presence and increase sales with our tailored solutions!
+					We provide professional design solutions for your business
+					Product listing, product development, A+ content, brand logos and more
 				</p>
 				<NavLink to="/contacts">
 					<button className="button cooperation__button">Contact us</button>
 				</NavLink>
+				<div className="performance__icons">
+					<Calls background="black"/>
+				</div>
+				
 			</>
 		,
 		className: "performance"
@@ -33,9 +40,12 @@ const Main = () => {
 	return (
 		<>
 			<Performance content={performance}/>
+			<Logos />
 			<Services />
 			<OurWorks />
-			<Cooperation /> 
+			<Terms />
+			<Cooperation />
+			<ContactsUs />
 		</>
 	)
 }

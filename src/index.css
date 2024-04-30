@@ -1,7 +1,32 @@
-body {
+/* body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Open Sans', sans-serif;;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+  overflow-x: hidden;
+} */
+
+@font-face {
+  font-family: 'Futura Book BT';
+  src: url('fonts/Futura Book BT.ttf');
+}
+
+@font-face {
+  font-family: 'FuturaDemiC_1';
+  src: url('fonts/FuturaDemiC_1.ttf');
+}
+
+@font-face {
+  font-family: 'Futura Extra Black';
+  src: url('fonts/Futura Extra Black.ttf');
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Futura Book BT', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
@@ -63,12 +88,14 @@ li {
 h1, h2, h3, h4,
 button, input, label {
   line-height: 1.1;
+  color: #111;
 }
 
 /* Balance text wrapping on headings */
 h1, h2,
 h3, h4 {
   text-wrap: balance;
+  font-family: 'FuturaDemiC_1', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -110,6 +137,7 @@ textarea:not([rows]) {
 }
 
 button {
+  font-family: 'FuturaDemiC_1', sans-serif;
   padding: 0;
   border: none;
   font: inherit;
@@ -128,6 +156,7 @@ h1 {
 h2 {
   font-size: 42px;
   font-weight: 500;
+  font-family: 'Futura Book BT', sans-serif;
 }
 
 h3 {

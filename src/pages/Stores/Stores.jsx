@@ -23,28 +23,28 @@ const Stores = () => {
 
     const gallery = [
 		{
-			img: "./img/carousel/stores/lutevid.png",
+			img: "./img/carousel/stores/lutevid.webp",
 			name: "lutevid",
 		},
 		{
-			img: "./img/carousel/stores/oxys_1.png",
+			img: "./img/carousel/stores/oxys_1.webp",
 			name: "osyx_1",
 		},
 		{
-			img: "./img/carousel/stores/incasol.png",
+			img: "./img/carousel/stores/incasol.webp",
 			name: "incasol",
 		},
 		{
-			img: "./img/carousel/stores/oxys_2.png",
+			img: "./img/carousel/stores/oxys_2.webp",
 			name: "oxys_2",
 		},
         {
-			img: "./img/carousel/stores/duston.png",
-			name: "duston",
+			img: "./img/carousel/stores/ecolait.webp",
+			name: "ecolait",
 		},
 		{
-			img: "./img/carousel/stores/flemona.png",
-			name: "flemona",
+			img: "./img/carousel/stores/sustarox.webp",
+			name: "sustarox",
 		},
     ]
 

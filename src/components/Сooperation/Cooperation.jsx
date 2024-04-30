@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-
 import './Cooperation.css';
 
 const Cooperation = () => {
@@ -39,6 +38,7 @@ const Cooperation = () => {
         })
     }
 
+
     const cooperations = cooperationsList.map((coop, i) => {
         return(
             <motion.li
@@ -56,31 +56,23 @@ const Cooperation = () => {
         <motion.section
             initial="hidden"
             whileInView="visible"
-            viewport={{amount: .1
-            }}
+            viewport={{amount: .1, once: true}}
             className="chapter cooperation">
+            
+            <div className="container">
             <div className="title__content">
                 <motion.h2
                     variants={textAnimation}
                     custom={0}
-                    className="title title_white">Steps of Cooperation</motion.h2>
+                    className="title title_white">
+                    Steps of Cooperation
+                </motion.h2>
             </div>
-            <div className="container">
                 <div className="cooperation__content">
                     <ul className="cooperation__list">
                         {cooperations}
                     </ul>
                 </div>
-                <motion.div
-                    variants={textAnimation}
-                    custom={5}
-                    className="cooperation__action">
-                    <h2 className="cooperation__title">Quality graphic designs that are guaranteed to impress your visitors – delivered in no time</h2>
-                    <p className="cooperation__desc">Ask for our competitive rates to get started</p>
-                    <NavLink to="/contacts">
-                        <button className="button cooperation__button">Contact us</button>
-                    </NavLink>
-                </motion.div>
             </div>
         </motion.section>
         

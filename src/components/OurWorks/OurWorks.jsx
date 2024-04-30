@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules';
+import { motion } from 'framer-motion';
+
 
 
 import 'swiper/css';
@@ -12,53 +14,52 @@ const OurWorks = () => {
 	
 	const imagesList = [
 		{
-			img: "./img/carousel/main/RetinOn.png",
-			name: "RetinOn",
+			img: "./img/carousel/main/Vimvital.webp",
+			name: "Vimvital",
 		},
 		{
-			img: "./img/carousel/main/Lutevid.png",
+			img: "./img/carousel/main/Lutevid.webp",
 			name: "Lutevid",
 		},
 		{
-			img: "./img/carousel/main/Ecolait.png",
-			name: "Ecolait",
-		},
-		{
-			img: "./img/carousel/main/Poweronyx.png",
+			img: "./img/carousel/main/Poweronyx.webp",
 			name: "Poweronyx",
 		},
 		{
-			img: "./img/carousel/main/Pursanga.png",
+			img: "./img/carousel/main/Pursanga.webp",
 			name: "Pursanga",
 		},
 		{
-			img: "./img/carousel/main/Sustarox.png",
+			img: "./img/carousel/main/Oxys.webp",
+			name: "Oxys",
+		},
+		{
+			img: "./img/carousel/main/Sustarox.webp",
 			name: "Sustarox",
 		},
 		{
-			img: "./img/carousel/main/Incas_Protect.png",
-			name: "Incas_Protect",
+			img: "./img/carousel/main/Sorax.webp",
+			name: "Sorax",
 		},
 		{
-			img: "./img/carousel/main/Yaconia.png",
-			name: "Yaconia",
+			img: "./img/carousel/main/Motion-Free.webp",
+			name: "Motion-Free",
 		},
 		{
-			img: "./img/carousel/main/Cristyler.png",
-			name: "Cristyler",
+			img: "./img/carousel/main/Renaza.webp",
+			name: "Renaza",
 		},
 		{
-			img: "./img/carousel/main/Elance.png",
-			name: "Elance",
-		},
-		
-		{
-			img: "./img/carousel/main/Flemona.png",
-			name: "Flemona",
+			img: "./img/carousel/main/Ecolait.webp",
+			name: "Ecolait",
 		},
 		{
-			img: "./img/carousel/main/Uventa.png",
+			img: "./img/carousel/main/Uventa.webp",
 			name: "Uventa",
+		},
+		{
+			img: "./img/carousel/main/Yaconia.webp",
+			name: "Yaconia",
 		},
 	]
 
@@ -70,11 +71,32 @@ const OurWorks = () => {
 		)
 	})
 
+	const textAnimation = {
+        hidden: {
+            y: 40,
+            opacity: 0
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: custom * 0.1
+            }
+        })
+    }
+
 	return (
-		<div className='chapter'>
-			<div className='title__content'>
+		<motion.section
+			initial="hidden"
+			viewport={{amount: .1, once: true}}
+			whileInView="visible"
+			className='chapter'>
+				<div className="container">
+				<motion.div custom={0} variants={textAnimation} className='title__content'>
 				<h2 className='title'>HOW WE DO</h2>
-			</div>
+			</motion.div>
+				</div>
+			
 			
 			<Swiper
 				// freeMode={true}
@@ -84,9 +106,13 @@ const OurWorks = () => {
 				modules={[FreeMode, Autoplay]}
 				className="mySwiper"
 				breakpoints={{
+					640: {
+						slidesPerView: 1.5,
+						spaceBetween: 10
+					},
 					810: {
-						slidesPerView: 1,
-						spaceBetween: 0
+						slidesPerView: 2.5,
+						spaceBetween: 10
 					},
 					1000: {
 						slidesPerView: 3.5,
@@ -105,15 +131,12 @@ const OurWorks = () => {
 				loop={true}
 				// centeredSlides={true}
 				grabCursor={true}
-				initialSlide={4}
-				
-				
-				
+				initialSlide={3}
 				centeredSlides={true}
 			>
 				{images}
 			</Swiper>
-		</div>
+		</motion.section>
 	)
 }
 

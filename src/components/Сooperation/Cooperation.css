@@ -1,6 +1,6 @@
 .cooperation {
     position: relative;
-    background-image: url('/public/img/bg.png');
+    background-image: url('/public/img/bg.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,6 +18,18 @@
     height: 100%;
     opacity: .70;
     background: linear-gradient(to right, black 0%, black 70%, transparent 100%);
+}
+
+.cooperation::after {
+    display: block;
+    z-index: 1;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: linear-gradient(to top, #111 0%,  transparent 15%);
 }
 
 
@@ -95,4 +107,12 @@
 
 .cooperation__button {
     margin-top: 20px;
+}
+
+
+
+@media (max-width: 1000px) { 
+    .cooperation  {
+        background-position: center right;
+    }
 }

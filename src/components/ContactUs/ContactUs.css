@@ -6,7 +6,6 @@
 }
 
 .action__title {
-    text-transform: uppercase;
     font-weight: 700;
     color: #F4CE19;
 }
@@ -16,3 +15,28 @@
     font-weight: 300;
     color: white;
 }
+
+.action__form-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.action__form-box {
+    width: 50%;
+}
+
+@media (max-width: 1240px) { 
+    .action__form-box {
+        width:80%;
+    }
+}
+
+@media (max-width: 810px) { 
+    .action__form-box {
+        width: 90%;
+    }
+}
+

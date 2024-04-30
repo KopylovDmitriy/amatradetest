@@ -1,14 +1,29 @@
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
+import { NavLink } from "react-router-dom"
+
 
 
 import Performance from "../../components/Performance/Performance";
+import Modal from '../../components/Modal/Modal';
+import Form from '../../components/Form/Form';
+import Calls from '../../components/Calls/Calls';
 
 import './Contacts.css';
 
 const Contacts = () => {
+
+    const [data, setData] = useState(
+        {
+            to_name: '',
+            to_email: '',
+            to_message: ''
+        }
+    );
+    const [modalActive, setModalActive] = useState(false);
 
     useEffect(() => {
 		window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -40,66 +55,85 @@ const Contacts = () => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs
-          .sendForm('service_desqf7n', 'template_mhafkv4', form.current, {
-            publicKey: 'wJgFkgQ3-sfMsvvZW',
-          })
-          .then(
-            () => {
-              console.log('SUCCESS!');
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-      };
+        // emailjs
+        //   .sendForm('service_desqf7n', 'template_mhafkv4', form.current, {
+        //     publicKey: 'wJgFkgQ3-sfMsvvZW',
+        //   })
+        //   .then(
+        //     () => {
+        //       console.log('SUCCESS!');
+        //     },
+        //     (error) => {
+        //       console.log('FAILED...', error.text);
+        //     },
+        //   );
+        
+        // Поставить общее условия и менять только состояние
+        // if(!isModalActive) {
+		// 	body.style.overflow = 'hidden'
+        // }
+        // else {
+		// 	body.style.overflow = ''
+        // }
 
+        setModalActive(true)
+        setData(
+            {
+                to_name: '',
+                to_email: '',
+                to_message: ''
+            } 
+        )
+    };
+
+    const onChange = (e) => {
+        setData(
+            {
+                ...data,
+                [e.target.name]: e.target.value
+            }
+        )
+    }
+    
     return(
         <div className="page">
+            
             <Performance content={performance} />
+            
             <div className="container">
-                <motion.section
-                initial="hidden"
-                whileInView="visible"
-                viewport={{amount: .2}}
-                className="page__wrapper">
-                    <motion.div variants={textAnimation}className="page__content">
+                <div className="page__wrapper">
+                    <div className="page__content">
+                        
+
                         <div className="page__application">
-
-                            <form className="form" ref={form} onSubmit={sendEmail}>
-                                <div className="form__group">
-                                    <label className="form__label" >Name*</label>
-                                    <input type="text" placeholder="Your name" className="input" name="to_name"/>
-                                </div>
-                                <div className="form__group">
-                                    <label className="form__label" >Email*</label>
-                                    <input type="email" placeholder="Your email" className="input" name="to_email"/>
-                                </div>
-                                <div className="form__group">
-                                    <label className="form__label">Message</label>
-                                    <textarea cols="30" rows="4" placeholder="Your message" className="textarea" name="to_message"></textarea>
-                                </div>
-                                <button type="submit" className="button button__input">Send message</button>
-
-                            </form>
-
+                            <Form color="white"/>
                         </div>
 
-                        <div className="page__contactss">
-                            <div className='header__logo'>
-                                <img
-                                    style={{ width: "120px" }}
-                                    src='./img/logo_white.svg'
-                                    alt='amatrade logo'
-                                />
-                            </div>
+                        <div className="page__contacts">
+                            <NavLink to="/">
+                                <div className='header__logo'>
+                                    <img
+                                        style={{ width: "120px" }}
+                                        src='./img/logo_white.svg'
+                                        alt='amatrade logo'
+                                    />
+                                </div>
+				             </NavLink>
+                            
                             <p className="contacts__title">START A CONVERSATION</p>
-                            <p className="contacts__desc">plisko.e@gystecom.ae</p>
-                            <p className="contacts__desc">+48667952174</p>
+                            <p className="contacts__desc">contact@amatrade.pl</p>
+                            <div className="contacts__icons">
+                                <Calls />
+                            </div>
+                            
                         </div>
-                    </motion.div>
-                </motion.section>
+                        
+                    </div>
+                </div>
             </div>
+
+            <Modal active={modalActive} setActive={setModalActive}/>
+
         </div>
     )
 }

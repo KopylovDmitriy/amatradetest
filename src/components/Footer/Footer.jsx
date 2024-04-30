@@ -1,4 +1,6 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+
+import Calls from "../Calls/Calls";
 
 import "./Footer.css"
 
@@ -61,15 +63,7 @@ const Footer = () => {
 						</ul>
 					</nav>
 					<div className="footer__contacts">
-						<div className="footer__info">
-							<img src="./img/icons/mail.svg" alt="mail" className="footer__img"/>
-							<p className="footer__desc">plisko.e@gystecom.ae</p>
-						</div>
-						<div className="footer__info">
-							<img src="./img/icons/telegram.svg" alt="telegram" className="footer__img"/>
-							<img src="./img/icons/whats-app.svg" alt="whats app" className="footer__img"/>
-							<p className="footer__desc">+48667952174</p>
-						</div>
+						<Calls background="black" size="small"/>
 					</div>
 				</div>
 			</div>

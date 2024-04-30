@@ -5,7 +5,7 @@
   padding: 0 40px;
 }
 
-.button {
+/* .button {
   position: relative;
   border-radius: 4px 4px 4px 4px;
   padding: 12px 24px;
@@ -22,8 +22,23 @@
   text-transform: uppercase;
   background: #F4CE19;
   color: #111;
+} */
+
+.button {
+  font-family: 'FuturaDemiC_1', sans-serif;
+  position: relative;
+  border-radius: 30px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  background: #F4CE19;
+  color: #111;
+  transition: .2s linear;
 }
 
+.button:hover {
+  box-shadow: 0 0 12px #F4CE19;
+  transform: scale(1.05);
+}
 
 .title__content {
   display: flex;
@@ -35,6 +50,7 @@
 }
 
 .title {
+  font-family: 'Futura Extra Black', sans-serif;
   position: relative;
   display: block;
   z-index: 2;
@@ -80,7 +96,7 @@
 
 @media (max-width: 810px) { 
   .container {
-    padding: 0 20px;
+    padding: 0 28px;
   }
 }
 

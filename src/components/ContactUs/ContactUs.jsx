@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { motion } from 'framer-motion';
 
+import Form from "../Form/Form";
 
 import './ContactUs.css'
 
@@ -22,19 +23,22 @@ const ContactUs = () => {
 
     return(
         
-        <motion.section
-            initial="hidden"
-            whileInView="visible"
-            viewport={{amount: .2}}
+        <section
             className="action">
-            <motion.div custom={0} variants={textAnimation} className="container">
+            <div custom={0} variants={textAnimation} className="container">
                 <h2 className="action__title">Quality graphic designs that are guaranteed to impress your visitors – delivered in no time</h2>
                 <p className="action__desc">Ask for our competitive rates to get started</p>
-                <NavLink to="/contacts">
+                {/* <NavLink to="/contacts">
                     <button  className="button cooperation__button">Contact us</button>
-                </NavLink>
-            </motion.div>
-        </motion.section>
+                </NavLink> */}
+                <div className="action__form-wrapper">
+                    <div className="action__form-box">
+                        <Form color="black"/>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     )
 }
 

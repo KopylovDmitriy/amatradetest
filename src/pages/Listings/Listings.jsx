@@ -23,29 +23,29 @@ const Listings = () => {
 
     const gallery = [
 		{
-			img: "./img/carousel/main/Pursanga.png",
+			img: "./img/carousel/main/Pursanga.webp",
 			name: "Pursanga",
 		},
 		{
-			img: "./img/carousel/main/Poweronyx.png",
+			img: "./img/carousel/main/Renaza.webp",
+			name: "Renaza",
+		},
+		{
+			img: "./img/carousel/main/Motion-Free.webp",
+			name: "Motion-Free",
+		},
+		{
+			img: "./img/carousel/main/Poweronyx.webp",
 			name: "Poweronyx",
 		},
 		{
-			img: "./img/carousel/main/Ecolait.png",
-			name: "Ecolait",
+			img: "./img/carousel/main/Oxys.webp",
+			name: "Oxys",
 		},
 		{
-			img: "./img/carousel/main/Sustarox.png",
+			img: "./img/carousel/main/Sustarox.webp",
 			name: "Sustarox",
 		},
-		{
-			img: "./img/carousel/main/Yaconia.png",
-			name: "Yaconia",
-		},
-		{
-			img: "./img/carousel/main/Incas_Protect.png",
-			name: "Incas_Protect",
-		}
     ]
 
     return(
