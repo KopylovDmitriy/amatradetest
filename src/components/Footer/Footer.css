@@ -73,6 +73,9 @@
 
 
 @media (max-width: 810px) { 
+    .footer {
+        padding: 40px 0;
+    }
     .footer__list {
         flex-direction: column;
         align-items: center;

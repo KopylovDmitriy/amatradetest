@@ -1,26 +1,19 @@
-/* body {
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-y: scroll;
-  overflow-x: hidden;
-} */
-
 @font-face {
   font-family: 'Futura Book BT';
-  src: url('fonts/Futura Book BT.ttf');
+  src: url('./fonts/FuturaBookBTV2.woff2') format('woff2');
+  src: url('./fonts/FuturaBookBTV2.ttf') format('ttf');
 }
 
 @font-face {
-  font-family: 'FuturaDemiC_1';
-  src: url('fonts/FuturaDemiC_1.ttf');
+  font-family: 'Futura Demi C';
+  src: url('./fonts/FuturaDemiC.woff2') format('woff2');
+  src: url('./fonts/FuturaDemiC.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Futura Extra Black';
-  src: url('fonts/Futura Extra Black.ttf');
+  src: url('./fonts/FuturaExtraBlack.woff2') format('woff2');
+  src: url('./fonts/FuturaExtraBlack.ttf') format('ttf');
 }
 
 body {
@@ -95,7 +88,7 @@ button, input, label {
 h1, h2,
 h3, h4 {
   text-wrap: balance;
-  font-family: 'FuturaDemiC_1', sans-serif;
+  font-family: 'Futura Demi C', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -137,7 +130,7 @@ textarea:not([rows]) {
 }
 
 button {
-  font-family: 'FuturaDemiC_1', sans-serif;
+  font-family: 'Futura Demi C', sans-serif;
   padding: 0;
   border: none;
   font: inherit;
