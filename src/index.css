@@ -1,25 +1,22 @@
 @font-face {
-  font-family: 'Futura Book BT';
-  src: url('./fonts/FuturaBookBTV2.woff2') format('woff2');
-  src: url('./fonts/FuturaBookBTV2.ttf') format('ttf');
+  font-family: futuraBook;
+  src: url("../public/fonts/FuturaBookBTV2.ttf");
 }
 
 @font-face {
-  font-family: 'Futura Demi C';
-  src: url('./fonts/FuturaDemiC.woff2') format('woff2');
-  src: url('./fonts/FuturaDemiC.ttf') format('ttf');
+  font-family: futuraDemi;
+  src: url("../public/fonts/FuturaDemiC.ttf");
 }
 
 @font-face {
-  font-family: 'Futura Extra Black';
-  src: url('./fonts/FuturaExtraBlack.woff2') format('woff2');
-  src: url('./fonts/FuturaExtraBlack.ttf') format('ttf');
+  font-family: futuraExtra;
+  src: url("../public/fonts/FuturaExtraBlack.ttf");
 }
 
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: 'Futura Book BT', sans-serif;
+  font-family: futuraBook;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
@@ -27,7 +24,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -54,14 +51,22 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -76,19 +81,25 @@ li {
 
 /* Set core body defaults */
 
-
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
   line-height: 1.1;
   color: #111;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
-  font-family: 'Futura Demi C', sans-serif;
+  font-family: futuraDemi;
 }
 
 /* A elements that don't have a class get default styles */
@@ -114,8 +125,10 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -130,7 +143,7 @@ textarea:not([rows]) {
 }
 
 button {
-  font-family: 'Futura Demi C', sans-serif;
+  font-family: futuraDemi;
   padding: 0;
   border: none;
   font: inherit;
@@ -138,7 +151,6 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
-
 
 h1 {
   font-size: 66px;
@@ -149,7 +161,7 @@ h1 {
 h2 {
   font-size: 42px;
   font-weight: 500;
-  font-family: 'Futura Book BT', sans-serif;
+  font-family: futuraBook;
 }
 
 h3 {
@@ -162,11 +174,7 @@ p {
   line-height: 1.45;
 }
 
-
-
-
-
-@media (max-width: 810px) { 
+@media (max-width: 810px) {
   h1 {
     font-size: 54px;
   }
@@ -177,6 +185,3 @@ p {
     font-size: 18px;
   }
 }
-
-
-

@@ -1,123 +1,131 @@
+@font-face {
+  font-family: futuraBook;
+  src: url("../../../public/fonts/FuturaBookBTV2.ttf");
+}
+
+@font-face {
+  font-family: futuraExtra;
+  src: url("../../../public/fonts/FuturaExtraBlack.ttf");
+}
+
 .modal {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.2);
-    visibility: hidden;
-    opacity: 0;
-    transition: .2s linear;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s linear;
 }
 
 .modal.active {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal__box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border: 1px solid rgba(39, 35, 56, 0.3);
-    max-width: 500px;
-    box-shadow: 2.487px 1.678px 15px 0px rgb(0 0 0/15%);
-    border-radius: 2rem;
-    margin: 40px;
-    transform: scale(1);
-    transition: .15s linear;
-    z-index: 20020;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgba(39, 35, 56, 0.3);
+  max-width: 500px;
+  box-shadow: 2.487px 1.678px 15px 0px rgb(0 0 0/15%);
+  border-radius: 2rem;
+  margin: 40px;
+  transform: scale(1);
+  transition: 0.15s linear;
+  z-index: 20020;
 }
 
 .modal__content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
-    padding: 20px;
-    width: 100%;
+  padding: 20px;
+  width: 100%;
 }
 
 .modal__img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal__img img {
-    height: 120px;
+  height: 120px;
 }
 
 .modal__title {
-    font-size: 38px;
-    text-transform: uppercase;
-    font-family: 'Futura Extra Black';
-    margin-top: 16px;
+  font-size: 38px;
+  text-transform: uppercase;
+  font-family: futuraExtra;
+  margin-top: 16px;
 }
 
 .modal__desc {
-    font-family: 'Futura Book BT';
-    font-size: 20px;
-    color: #888888;
-    margin-top: 8px;
+  font-family: futuraBook;
+  font-size: 20px;
+  color: #888888;
+  margin-top: 8px;
 }
 
 .modal__email {
-    font-family: 'Futura Extra Black';
-    color: #888888;
-    margin-top: 8px;
+  font-family: futuraExtra;
+  color: #888888;
+  margin-top: 8px;
 }
 
 .modal__icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
-
 
 /* ----- CROSS ----- */
 
-
 .cross__body {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-    width: 20px;
-    /* border-radius: 100px; */
-    top: 9px;
-    right: 16px;
-    cursor: pointer;
-    margin: 10px 0;
-    transition: .2s linear;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  /* border-radius: 100px; */
+  top: 9px;
+  right: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: 0.2s linear;
 }
 
 .cross__bar {
-    width: 100%;
-    height: 3px;
-    background-color: #888;
-    border-radius: 0.5em;
+  width: 100%;
+  height: 3px;
+  background-color: #888;
+  border-radius: 0.5em;
 }
 
-.cross__bar:nth-child(1){
-    transform: rotate(45deg) translate(6px, 6px);
-    transition: ease-out 0.5s;
+.cross__bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  transition: ease-out 0.5s;
 }
 
-.cross__bar:nth-child(2){
-    transform: rotate(135deg) translate(-6px, 6px);
-    transition: ease-out 0.5s;
+.cross__bar:nth-child(2) {
+  transform: rotate(135deg) translate(-6px, 6px);
+  transition: ease-out 0.5s;
 }
 
 .cross__body:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
