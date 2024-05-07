@@ -7,50 +7,29 @@ import AboutUs from "../AboutUs/AboutUs";
 import "./Logos.css"
 
 const Logos = () => {
-    
-    useEffect(() => {
-        // if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        //     addAnimation();
-        // }
+
+    function addAnimation () {
 
         const scrollers = document.querySelectorAll(".scroller");
+        scrollers.forEach((scroller) => {
+            scroller.setAttribute('data-animated', true)
 
-        function addAnimation () {
-            scrollers.forEach((scroller) => {
-                scroller.setAttribute('data-animated', true)
-
-                const scrollerInner = scroller.querySelector('.scroller__inner');
-                const scrollerContent = Array.from(scrollerInner.children);
-                
-                scrollerContent.forEach(item => {
-                    const duplicatedItem = item.cloneNode(true);
-                    duplicatedItem.setAttribute('aria-hidden', true);
-                    scrollerInner.appendChild(duplicatedItem)
-                })
-
+            const scrollerInner = scroller.querySelector('.scroller__inner');
+            const scrollerContent = Array.from(scrollerInner.children);
+            
+            scrollerContent.forEach(item => {
+                const duplicatedItem = item.cloneNode(true);
+                duplicatedItem.setAttribute('aria-hidden', true);
+                scrollerInner.appendChild(duplicatedItem)
             })
 
-        }
-
-        addAnimation();
-
-        
-
-    }, [])
-
-    const textAnimation = {
-        hidden: {
-            y: -80,
-            opacity: 0
-        },
-        visible: custom => ({
-            y: 0,
-            opacity: 1,
-            transition: {
-                delay: custom * 0.1
-            }
         })
+
     }
+    
+    useEffect(() => {
+        addAnimation();
+    }, [])
 
     const modalAnimation = {
         hidden: {
@@ -72,11 +51,8 @@ const Logos = () => {
             whileInView="visible"
             viewport={{amount: .1}}
             className="chapter logos">
-            
-                
 
                 <motion.div  className="scroller" data-animated="true">
-                
                     <ul className="tag-list scroller__inner">
                         <li className="logos__item">
                             <img src="./img/logos/allegro.svg" alt="fsd" className="logo" />
@@ -100,7 +76,6 @@ const Logos = () => {
                             <img src="./img/logos/etsy.svg" alt="fsd" className="logo" />
                         </li>
                     </ul> 
-                    
                 </motion.div>
 
                 <motion.div custom={0} variants={modalAnimation} className="statistic__body">

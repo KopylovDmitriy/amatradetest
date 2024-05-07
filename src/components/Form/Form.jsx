@@ -73,22 +73,23 @@ const Form = ({color}) => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs
-          .sendForm('service_desqf7n', 'template_mhafkv4', form.current, {
-            publicKey: 'wJgFkgQ3-sfMsvvZW',
-          })
-          .then(
-            () => {
-              console.log('SUCCESS!');
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-
         if (!formValid) {
             setShowError(true);
         } else {
+
+            emailjs
+            .sendForm('service_desqf7n', 'template_mhafkv4', form.current, {
+                publicKey: 'wJgFkgQ3-sfMsvvZW',
+                })
+                .then(
+                () => {
+                console.log('SUCCESS!');
+                },
+                (error) => {
+                console.log('FAILED...', error.text);
+                },
+            );
+
             setModalActive(true);
             setName('');
             setEmail('');
